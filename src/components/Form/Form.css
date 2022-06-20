@@ -1,0 +1,97 @@
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    
+  }
+  .form {
+    padding:20px;
+  }
+  .formInput {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .formInput label {
+    font-size: 1.3rem;
+    padding-right: 0.7rem;
+  }
+  .inputField {
+    border: none;
+    width: 335px;
+    border-bottom: 1px solid black;
+  }
+  
+  .formInput.desc {
+    flex-direction: column;
+    width: 50%;
+  }
+  .formInput.desc label {
+    margin-bottom: 10px;
+  }
+  .description{
+    resize: none;
+    width: 480px;
+    height: 180px;
+  }
+  
+  .fileGroup {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fileInput {
+    width: 120px;
+    height: 120px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(to top, rgb(190, 186, 186), rgb(231, 231, 231));
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .fileInput label{
+    cursor: pointer;
+  }
+  
+  .addIcon{
+    position: absolute;
+    bottom: 9px;
+    right: 7px;
+    color: white;
+    background-color: #1289ee;
+    font-weight: 600;
+    padding: 1.5px 4px;
+    
+  }
+  
+  .fileInputControl {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .postSubmitButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: none;
+    background: #1289ee;
+    color: white;
+    font-weight: 600;
+  }
+  @media (max-width:678px){
+    .description{
+      width: calc(100vw - 70px);
+    }
+  }
+  
+  @media (max-width:514px){
+    .formInput label {
+      font-size: 1rem;
+      padding-right: 0.4rem;
+    }
+  .inputField {
+    width:calc(100vw - 150px);
+  }
+  }
