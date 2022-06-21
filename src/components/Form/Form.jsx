@@ -1,12 +1,28 @@
-import React from 'react'
+import {useState} from "react"
 import './Form.css';
-const Form = () => {
+
+export default function Form() {
+  const [data,setData]=useState({
+    postedBy:"",
+    title:"",
+    description:""
+  });
+  const [svg,setSVG]=useState(null);
+  const [png,setPNG]=useState(null);
+  const [docs,setDocs]=useState(null);
+  const [posters,setPosters]=useState(null)
+  const inputHandler=(e)=>{
+    setData(prevData=>({
+      ...prevData,
+      [e.target.name]:e.target.value
+    }))
+  }
   return (
     <div className="form">
       <form className="formControl">
         <div className="formInput">
           <label>Posted By:</label>
-          <input type="text" className="inputField" placeholder="Type here" />
+          <input type="text" name="postedBy"className="inputField" placeholder="Type here" onChange={(e)=>inputHandler(e)}/>
         </div>
         <div className="formInput">
           <label>Title:</label>
@@ -15,6 +31,7 @@ const Form = () => {
             className="inputField"
             name="title"
             placeholder="Type here"
+            onChange={(e)=>inputHandler(e)}
           />
         </div>
         <div className="formInput desc">
@@ -27,34 +44,35 @@ const Form = () => {
             maxlength="500"
             minlength="3"
             placeholder="Type here"
+            onChange={(e)=>inputHandler(e)}
           />
         </div>
         <div className="fileGroup">
           <div className="fileInput">
             <label>
               SVG
-              <input type="file" name="svg" className="fileInputControl" />
+              <input type="file" name="svg" className="fileInputControl" onChange={(e) => setSVG(e.target.files[0])}/>
               <div className="addIcon">+</div>
             </label>
           </div>
           <div className="fileInput">
             <label>
               PNG
-              <input type="file" name="png" className="fileInputControl" />
+              <input type="file" name="png" className="fileInputControl" onChange={(e) => setPNG(e.target.files[0])}/>
               <div className="addIcon">+</div>
             </label>
           </div>
           <div className="fileInput">
             <label>
               Docs
-              <input type="file" name="docs" className="fileInputControl" />
+              <input type="file" name="docs" className="fileInputControl" onChange={(e) => setDocs(e.target.files[0])}/>
               <div className="addIcon">+</div>
             </label>
           </div>
           <div className="fileInput">
             <label>
               Posters
-              <input type="file" name="psosters" className="fileInputControl" />
+              <input type="file" name="psosters" className="fileInputControl" onChange={(e) => setPosters(e.target.files[0])}/>
               <div className="addIcon">+</div>
             </label>
           </div>
@@ -64,6 +82,5 @@ const Form = () => {
         </button>
       </form>
     </div>
-  )
+  );
 }
-export default Form
