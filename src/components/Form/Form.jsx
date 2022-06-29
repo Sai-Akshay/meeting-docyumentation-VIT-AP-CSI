@@ -1,4 +1,5 @@
 import {useState} from "react"
+import BackButton from "./BackButton";
 import './Form.css';
 
 export default function Form() {
@@ -19,10 +20,11 @@ export default function Form() {
   }
   return (
     <div className="form">
+      <BackButton />
       <form className="formControl">
         <div className="formInput">
           <label>Posted By:</label>
-          <input type="text" name="postedBy"className="inputField" placeholder="Type here" onChange={(e)=>inputHandler(e)}/>
+          <input type="text" name="postedBy" className="inputField" placeholder="Type here" onChange={(e)=>inputHandler(e)}/>
         </div>
         <div className="formInput">
           <label>Title:</label>

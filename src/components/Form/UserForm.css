@@ -1,0 +1,57 @@
+p {
+  font-size: 1.3rem;
+  padding-right: 0.7rem;;
+}
+.userform {
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.peopleList {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px 0px;
+}
+.personTile {
+  border-radius: 50%;
+  width: 15vh;
+  height: 15vh;
+  min-width: 15vh;
+}
+
+.fileGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fileDownload {
+  width: 120px;
+  height: 120px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(to top, rgb(190, 186, 186), rgb(231, 231, 231));
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.downloadButton{
+  position: absolute;
+  bottom: 9px;
+  right: 7px;
+  color: white;
+  background-color: #1289ee;
+  font-weight: 600;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border: none;
+}
+
+@media (max-width:514px){
+  p {
+    font-size: 1rem;
+    padding-right: 0.4rem;
+  }
+}

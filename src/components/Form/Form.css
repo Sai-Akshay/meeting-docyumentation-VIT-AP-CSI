@@ -5,7 +5,7 @@
     
   }
   .form {
-    padding:20px;
+    padding: 40px;
   }
   .formInput {
     margin-bottom: 10px;
@@ -62,8 +62,9 @@
     color: white;
     background-color: #1289ee;
     font-weight: 600;
-    padding: 1.5px 4px;
-    
+    height: 24px;
+    width: 24px;
+    text-align: center;
   }
   
   .fileInputControl {
@@ -94,4 +95,4 @@
   .inputField {
     width:calc(100vw - 150px);
   }
-  }
+}
